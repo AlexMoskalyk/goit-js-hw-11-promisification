@@ -18,14 +18,17 @@ const toggleUserState = (allUsers, userName) => {
     user.name === userName ? { ...user, active: !user.active } : user,
   );
 
-    return new Promise((resolve, reject) => {
-        if (updatedUsers) {
-            resolve(updatedUsers);
-            return;
-        }
+  return Promise.resolve(updatedUsers);
+
+
+  //   return new Promise((resolve, reject) => {
+  //       if (updatedUsers) {
+  //           resolve(updatedUsers);
+  //           return;
+  //       }
         
-        reject();
-  })
+  //       reject();
+  // })
 };
 
 
